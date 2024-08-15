@@ -12,10 +12,10 @@ import {
   providers: [GoogleGenAiService],
   exports: [GoogleGenAiService]
 })
-export class GoogleGenaiModule {
+export class GoogleGenAiModule {
   static register(options: GoogleGenAiModuleOptions): DynamicModule {
     return {
-      module: GoogleGenaiModule,
+      module: GoogleGenAiModule,
       providers: [{ provide: GOOGLE_GENAI_MODULE_OPTIONS, useValue: options }]
     };
   }
@@ -24,7 +24,7 @@ export class GoogleGenaiModule {
     options: GoogleGenAiModuleAsyncOptions
   ): DynamicModule {
     return {
-      module: GoogleGenaiModule,
+      module: GoogleGenAiModule,
       imports: options.imports || [],
       providers: [...this.createAsyncProviders(options)]
     };
