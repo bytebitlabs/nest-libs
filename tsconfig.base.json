@@ -1,0 +1,27 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "lib": ["es2020", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@bytebitlabs/nest-anthropic": ["nest-anthropic/src/index.ts"],
+      "@bytebitlabs/nest-google-genai": ["nest-google-genai/src/index.ts"],
+      "@bytebitlabs/nest-groq": ["nest-groq/src/index.ts"],
+      "@bytebitlabs/nest-openai": ["nest-openai/src/index.ts"],
+      "@bytebitlabs/nest-opensearch": ["nest-opensearch/src/index.ts"],
+      "@bytebitlabs/nest-qdrant": ["nest-qdrant/src/index.ts"]
+    }
+  },
+  "exclude": ["node_modules", "tmp"]
+}

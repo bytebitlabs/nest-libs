@@ -1,0 +1,33 @@
+{
+  "name": "nest-opensearch",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "nest-opensearch/src",
+  "projectType": "library",
+  "release": {
+    "version": {
+      "generatorOptions": {
+        "packageRoot": "dist/{projectRoot}",
+        "currentVersionResolver": "git-tag"
+      }
+    }
+  },
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/nest-opensearch",
+        "tsConfig": "nest-opensearch/tsconfig.lib.json",
+        "packageJson": "nest-opensearch/package.json",
+        "main": "nest-opensearch/src/index.ts",
+        "assets": ["nest-opensearch/*.md"]
+      }
+    },
+    "nx-release-publish": {
+      "options": {
+        "packageRoot": "dist/{projectRoot}"
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "name": "nest-anthropic",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "nest-anthropic/src",
+  "projectType": "library",
+  "release": {
+    "version": {
+      "generatorOptions": {
+        "packageRoot": "dist/{projectRoot}",
+        "currentVersionResolver": "git-tag"
+      }
+    }
+  },
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/nest-anthropic",
+        "tsConfig": "nest-anthropic/tsconfig.lib.json",
+        "packageJson": "nest-anthropic/package.json",
+        "main": "nest-anthropic/src/index.ts",
+        "assets": ["nest-anthropic/*.md"]
+      }
+    },
+    "nx-release-publish": {
+      "options": {
+        "packageRoot": "dist/{projectRoot}"
+      }
+    }
+  }
+}

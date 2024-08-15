@@ -1,0 +1,14 @@
+{
+  "name": "@bytebitlabs/nest-qdrant",
+  "version": "0.0.1",
+  "license": "MIT",
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "type": "commonjs",
+  "main": "./src/index.js",
+  "typings": "./src/index.d.ts",
+  "publishConfig": {
+     "access": "public"
+   }
+}

@@ -1,0 +1,33 @@
+{
+  "name": "nest-qdrant",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "nest-qdrant/src",
+  "projectType": "library",
+  "release": {
+    "version": {
+      "generatorOptions": {
+        "packageRoot": "dist/{projectRoot}",
+        "currentVersionResolver": "git-tag"
+      }
+    }
+  },
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/nest-qdrant",
+        "tsConfig": "nest-qdrant/tsconfig.lib.json",
+        "packageJson": "nest-qdrant/package.json",
+        "main": "nest-qdrant/src/index.ts",
+        "assets": ["nest-qdrant/*.md"]
+      }
+    },
+    "nx-release-publish": {
+      "options": {
+        "packageRoot": "dist/{projectRoot}"
+      }
+    }
+  }
+}

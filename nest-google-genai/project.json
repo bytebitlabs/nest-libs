@@ -1,0 +1,33 @@
+{
+  "name": "nest-google-genai",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "nest-google-genai/src",
+  "projectType": "library",
+  "release": {
+    "version": {
+      "generatorOptions": {
+        "packageRoot": "dist/{projectRoot}",
+        "currentVersionResolver": "git-tag"
+      }
+    }
+  },
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/nest-google-genai",
+        "tsConfig": "nest-google-genai/tsconfig.lib.json",
+        "packageJson": "nest-google-genai/package.json",
+        "main": "nest-google-genai/src/index.ts",
+        "assets": ["nest-google-genai/*.md"]
+      }
+    },
+    "nx-release-publish": {
+      "options": {
+        "packageRoot": "dist/{projectRoot}"
+      }
+    }
+  }
+}
