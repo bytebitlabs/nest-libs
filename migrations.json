@@ -1,12 +1,18 @@
 {
   "migrations": [
     {
-      "cli": "nx",
-      "version": "19.6.3-beta.0",
-      "description": "Migrate proxy config files to match new format from webpack-dev-server v5.",
-      "implementation": "./src/migrations/update-19-6-3/proxy-config",
-      "package": "@nx/webpack",
-      "name": "update-19-6-3-proxy-config"
+      "version": "20.2.0-beta.5",
+      "description": "Update TypeScript ESLint packages to v8.13.0 if they are already on v8",
+      "implementation": "./src/migrations/update-20-2-0/update-typescript-eslint-v8-13-0",
+      "package": "@nx/eslint",
+      "name": "update-typescript-eslint-v8.13.0"
+    },
+    {
+      "version": "20.3.0-beta.1",
+      "description": "Update ESLint flat config to include .cjs, .mjs, .cts, and .mts files in overrides (if needed)",
+      "implementation": "./src/migrations/update-20-3-0/add-file-extensions-to-overrides",
+      "package": "@nx/eslint",
+      "name": "add-file-extensions-to-overrides"
     }
   ]
 }
